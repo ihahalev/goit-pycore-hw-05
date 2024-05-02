@@ -2,7 +2,7 @@ import re
 from decimal import Decimal
 from typing import Callable, Generator
 
-def generator_numbers(text: str) -> Generator[str]:
+def generator_numbers(text: str) -> Generator[str, None, None]:
     filter_pattern = r" \d+\.\d+ "
     numbers: list[str] = re.findall(filter_pattern, text)
     for num in numbers:
